@@ -48,18 +48,17 @@ livraria/
 ## 🏃 Como Executar
 1. Clone o repositório:
 
-   ```bash
 git clone https://github.com/nadiacaricatto/projeto_final_bloco_01.git
 
-3. Entre na pasta do projeto:
+2. Entre na pasta do projeto:
 
 cd livraria
 
-5. Compile o projeto:
+3. Compile o projeto:
 
 javac -d bin $(find . -name "*.java")
   
-7. Execute o programa:
+4. Execute o programa:
 
 java -cp bin livraria.application.Menu
 
