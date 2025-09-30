@@ -7,7 +7,7 @@ import livraria.util.Cores;
 public class Menu {
 
 	static Scanner leia = new Scanner(System.in);
-	
+
 	public static void main(String[] args) {
 
 		int opcao;
@@ -16,7 +16,7 @@ public class Menu {
 
 		while (true) {
 
-			System.out.println(Cores.TEXT_BLACK_BOLD_BRIGHT + Cores.ANSI_CYAN_BACKGROUND_BRIGHT
+			System.out.println(Cores.TEXT_BLACK_BOLD + Cores.ANSI_GREEN_BACKGROUND
 					+ "*******************************************************");
 			System.out.println("                                                       ");
 			System.out.println("               LIVRARIA DO BECO HORIZONTAL             ");
@@ -26,8 +26,9 @@ public class Menu {
 			System.out.println("                1 - CADASTRAR LIVRO                    ");
 			System.out.println("                2 - LISTAR TODOS OS LIVROS             ");
 			System.out.println("                3 - BUSCAR LIVRO POR GÊNERO            ");
-			System.out.println("                4 - RECOMENDAR UM LIVRO                ");
-			System.out.println("                5 - APAGAR LIVRO CADASTRADO            ");
+			System.out.println("                4 - BUSCAR LIVRO POR ID                ");
+			System.out.println("                5 - RECOMENDAR UM LIVRO ALEATÓRIO      ");
+			System.out.println("                6 - APAGAR LIVRO CADASTRADO            ");
 			System.out.println("                0 - SAIR                               ");
 			System.out.println("                                                       ");
 			System.out.println("*******************************************************");
@@ -48,7 +49,7 @@ public class Menu {
 			}
 
 			if (opcao == 0) {
-				System.out.println(Cores.TEXT_WHITE_BOLD + "\nLIVRARIA DO BECO HORIZONTAL\n"
+				System.out.println(Cores.TEXT_BLACK_BOLD + "\nLIVRARIA DO BECO HORIZONTAL\n"
 						+ "OBRIGADO POR UTILIZAR NOSSO SISTEMA. ATÉ A PRÓXIMA!");
 				sobre();
 				leia.close();
@@ -57,30 +58,34 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "CADASTRAR LIVRO\n\n");
-				cadastrarProdutos();
+				System.out.println(Cores.TEXT_BLACK_BOLD + "CADASTRAR LIVRO\n\n");
+				cadastrarLivro();
 				keyPress();
 				break;
 			case 2:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "LISTAR TODOS OS LIVROS\n\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD + "LISTAR TODOS OS LIVROS\n\n");
 
-				listarProdutos();
+				listarTodos();
 
 				keyPress();
 				break;
 			case 3:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "BUSCAR LIVRO POR GÊNERO\n\n");
-				procurarPorId();
+				System.out.println(Cores.TEXT_BLACK_BOLD + "BUSCAR LIVRO POR GÊNERO\n\n");
+				buscaGen();
 				keyPress();
 				break;
 			case 4:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "RECOMENDAR UM LIVRO\n\n");
-				atualizarProdutos();
-
+				System.out.println(Cores.TEXT_BLACK_BOLD + "BUSCAR LIVRO POR ID\n\n");
+				buscaId();
 				keyPress();
 				break;
 			case 5:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "APAGAR LIVRO CADASTRADO\n\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD + "RECOMENDAR UM LIVRO ALEATÓRIO\n\n");
+				recomenda();
+				keyPress();
+				break;
+			case 6:
+				System.out.println(Cores.TEXT_BLACK_BOLD + "APAGAR LIVRO CADASTRADO\n\n");
 
 				deletarProdutos();
 
