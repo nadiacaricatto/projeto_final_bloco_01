@@ -60,22 +60,22 @@ public abstract class Livros {
 	
 	public void visualizar() {
 		
-		String tipo = " ";
+		String tipo;
 		
-				switch (this.genero) {
-				case 1 -> tipo = "Terror";
-				case 2 -> tipo = "Infantil";
-				default -> tipo = "Desconhecido";
-				}
+			switch (this.genero) {
+			case 1 -> tipo = "Terror";
+			case 2 -> tipo = "Infantil";
+			default -> tipo = "Desconhecido";
+			}
 
-				System.out.println("\n********************************************");
-				System.out.println("Informações");
-				System.out.println("********************************************");
-				System.out.printf("Id: %d%n", this.id);
-				System.out.printf("Título: %s%n", this.titulo);
-				System.out.printf("Preço: %.2f%n", this.preco);
-				System.out.printf("Quantidade em Estoque: %d%n", this.qnt);
-				System.out.printf("Gênero: %d%n", tipo);
+		System.out.println("\n********************************************");
+		System.out.println("Informações");
+		System.out.println("********************************************");
+		System.out.printf("Id: %d%n", this.id);
+		System.out.printf("Título: %s%n", this.titulo);
+		System.out.printf("Preço: %.2f%n", this.preco);
+		System.out.printf("Quantidade em Estoque: %d%n", this.qnt);
+		System.out.printf("Gênero: %s%n", tipo);
 				
 				
 				}

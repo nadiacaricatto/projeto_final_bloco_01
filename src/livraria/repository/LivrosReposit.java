@@ -4,9 +4,9 @@ import livraria.model.Livros;
 
 public interface LivrosReposit {
 
-	public void cadastrarLivro();
+	public void cadastrarLivro(Livros livro);
 
-	public void listarTodos(Livros livraria);
+	public void listarTodos();
 
 	public void buscaGen(int gen);
 

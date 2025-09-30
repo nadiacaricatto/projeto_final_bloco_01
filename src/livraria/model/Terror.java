@@ -21,5 +21,6 @@ public class Terror extends Livros {
 		super.visualizar();
 		System.out.printf("\nNível de Medo: %d%n", this.nivelMedo);
 	}
-
+	
 }
+
