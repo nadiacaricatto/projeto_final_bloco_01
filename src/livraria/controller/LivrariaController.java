@@ -11,8 +11,8 @@ import livraria.repository.LivrosReposit;
 public class LivrariaController implements LivrosReposit {
 
 	private List<Livros> listaLivros = new ArrayList<Livros>();
-	// é privada porque só funciona dentro da classe conta controller
-	private int nextId = 1;
+	
+	private int contadorId = 1;
 
 	@Override
 	public void listarTodos() {
@@ -24,8 +24,7 @@ public class LivrariaController implements LivrosReposit {
 
 	@Override
 	public void cadastrarLivro(Livros livro) {
-		livro.setId(nextId++);
-		listaLivros.add(livro);
+		livro.setId(contadorId++);
 		listaLivros.add(livro);
 		System.out.println("Livro cadastrado com sucesso!");
 

@@ -4,8 +4,8 @@ public class Infantil extends Livros {
 
 	private String tema;
 
-	public Infantil(int id, String titulo, float preco, int qnt, int genero, String tema) {
-		super(id, titulo, preco, qnt, genero);
+	public Infantil( String titulo, float preco, int qnt, int genero, String tema) {
+		super(titulo, preco, qnt, genero);
 		this.tema = tema;
 	}
 

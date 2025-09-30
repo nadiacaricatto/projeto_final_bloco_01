@@ -56,7 +56,7 @@ public class Menu {
 			}
 
 			if (opcao == 0) {
-				System.out.println(Cores.TEXT_BLACK_BOLD + "\nLIVRARIA DO BECO HORIZONTAL\n"
+				System.out.println(Cores.TEXT_WHITE_BOLD + "\nLIVRARIA DO BECO HORIZONTAL\n"
 						+ "OBRIGADO POR UTILIZAR NOSSO SISTEMA. ATÉ A PRÓXIMA!");
 				sobre();
 				leia.close();
@@ -65,34 +65,34 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-				System.out.println(Cores.TEXT_BLACK_BOLD + "CADASTRAR LIVRO\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "CADASTRAR LIVRO\n\n");
 				cadastrarLivro();
 				keyPress();
 				break;
 			case 2:
-				System.out.println(Cores.TEXT_BLACK_BOLD + "LISTAR TODOS OS LIVROS\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "LISTAR TODOS OS LIVROS\n\n");
 
 				listarTodos();
 
 				keyPress();
 				break;
 			case 3:
-				System.out.println(Cores.TEXT_BLACK_BOLD + "BUSCAR LIVRO POR GÊNERO\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "BUSCAR LIVRO POR GÊNERO\n\n");
 				buscaGen();
 				keyPress();
 				break;
 			case 4:
-				System.out.println(Cores.TEXT_BLACK_BOLD + "BUSCAR LIVRO POR ID\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "BUSCAR LIVRO POR ID\n\n");
 				buscaId();
 				keyPress();
 				break;
 			case 5:
-				System.out.println(Cores.TEXT_BLACK_BOLD + "RECOMENDAR UM LIVRO ALEATÓRIO\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "RECOMENDAR UM LIVRO ALEATÓRIO\n\n");
 				recomenda();
 				keyPress();
 				break;
 			case 6:
-				System.out.println(Cores.TEXT_BLACK_BOLD + "APAGAR LIVRO CADASTRADO\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "APAGAR LIVRO CADASTRADO\n\n");
 
 				deletarLivro();
 
@@ -147,11 +147,11 @@ public class Menu {
 	            System.out.print("Nível de medo: ");
 	            int nivelMedo = leia.nextInt();
 	            leia.nextLine();
-	            livro = new Terror(0, titulo, preco, qnt, genero, nivelMedo);
+	            livro = new Terror(titulo, preco, qnt, genero, nivelMedo);
 	        } else {
 	            System.out.print("Tema abordado: ");
 	            String tema = leia.nextLine();
-	            livro = new Infantil(0, titulo, preco, qnt, genero, tema);
+	            livro = new Infantil(titulo, preco, qnt, genero, tema);
 	        }
 
 	        controller.cadastrarLivro(livro);
@@ -195,11 +195,15 @@ public class Menu {
 	    }
 
 	    private static void criarLivrosTeste() {
+	     
+	    controller.cadastrarLivro(new Terror("Infinity Pool", 25.0f, 10, 1, 7));
+        controller.cadastrarLivro(new Infantil("Harry Potter e a Pedra Filosofal", 40.0f, 5, 2, "Magia"));
+        controller.cadastrarLivro(new Terror("Casas Estranhas", 25.0f, 10, 1, 6));
+        controller.cadastrarLivro(new Terror("Desenhos Estranhos", 25.0f, 5, 1, 6));
+        controller.cadastrarLivro(new Infantil("Demi e o Pote Vazio", 25.0f, 10, 2, "Moral"));
+        controller.cadastrarLivro(new Infantil("Levada, eu?", 65.0f, 5, 2, "Cotidiano Divertido"));
 	        
-	        controller.cadastrarLivro(new Terror(0, "Drácula", 25.0f, 10, 1, 5));
-	        controller.cadastrarLivro(new Infantil(0, "Harry Potter", 40.0f, 5, 2, "Magia"));
-	    }
-	
+	    	
 
 
 
@@ -213,5 +217,5 @@ public class Menu {
 
 
 	}
-
+}
 

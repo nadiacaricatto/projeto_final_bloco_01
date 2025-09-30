@@ -58,6 +58,14 @@ public abstract class Livros {
 		this.genero = genero;
 	}
 	
+
+    public Livros(String titulo, float preco, int qnt, int genero) {
+        this.titulo = titulo;
+        this.preco = preco;
+        this.qnt = qnt;
+        this.genero = genero;
+    }	
+	
 	public void visualizar() {
 		
 		String tipo;
