@@ -20,23 +20,23 @@ public class Menu {
 		int opcao;
 
 		criarLivrosTeste();
-
+		
 		while (true) {
 
 			System.out.println(Cores.TEXT_BLACK_BOLD + Cores.ANSI_GREEN_BACKGROUND
 					+ "*******************************************************");
 			System.out.println("                                                       ");
-			System.out.println("               LIVRARIA DO BECO HORIZONTAL             ");
+			System.out.println("              🧙 LIVRARIA DO BECO HORIZONTAL 🐦‍🔥        ");
 			System.out.println("                                                       ");
 			System.out.println("*******************************************************");
 			System.out.println("                                                       ");
-			System.out.println("                1 - CADASTRAR LIVRO                    ");
-			System.out.println("                2 - LISTAR TODOS OS LIVROS             ");
-			System.out.println("                3 - BUSCAR LIVRO POR GÊNERO            ");
-			System.out.println("                4 - BUSCAR LIVRO POR ID                ");
-			System.out.println("                5 - RECOMENDAR UM LIVRO ALEATÓRIO      ");
-			System.out.println("                6 - APAGAR LIVRO CADASTRADO            ");
-			System.out.println("                0 - SAIR                               ");
+			System.out.println("                1 - CADASTRAR LIVRO  🪄                ");
+			System.out.println("                2 - LISTAR TODOS OS LIVROS 🧚          ");
+			System.out.println("                3 - BUSCAR LIVRO POR GÊNERO 🧙‍♂️         ");
+			System.out.println("                4 - BUSCAR LIVRO POR ID 🐦‍⬛             ");
+			System.out.println("                5 - RECOMENDAR UM LIVRO ALEATÓRIO 🔮   ");
+			System.out.println("                6 - APAGAR LIVRO CADASTRADO 🐉         ");
+			System.out.println("                0 - SAIR 🧙‍♂️                            ");
 			System.out.println("                                                       ");
 			System.out.println("*******************************************************");
 			System.out.println("                                                       ");
