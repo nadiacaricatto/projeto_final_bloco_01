@@ -65,34 +65,34 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "CADASTRAR LIVRO\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "CADASTRAR LIVRO\n");
 				cadastrarLivro();
 				keyPress();
 				break;
 			case 2:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "LISTAR TODOS OS LIVROS\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "LISTAR TODOS OS LIVROS\n");
 
 				listarTodos();
 
 				keyPress();
 				break;
 			case 3:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "BUSCAR LIVRO POR GÊNERO\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "BUSCAR LIVRO POR GÊNERO\n");
 				buscaGen();
 				keyPress();
 				break;
 			case 4:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "BUSCAR LIVRO POR ID\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "BUSCAR LIVRO POR ID\n");
 				buscaId();
 				keyPress();
 				break;
 			case 5:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "RECOMENDAR UM LIVRO ALEATÓRIO\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "RECOMENDAR UM LIVRO ALEATÓRIO\n");
 				recomenda();
 				keyPress();
 				break;
 			case 6:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "APAGAR LIVRO CADASTRADO\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "APAGAR LIVRO CADASTRADO\n");
 
 				deletarLivro();
 
@@ -125,8 +125,14 @@ public class Menu {
 	private static void cadastrarLivro() {
 	        System.out.print("Título: ");
 	        String titulo = leia.nextLine();
+	        
+	        System.out.print("Ano de Lançamento: ");
+	        int ano = leia.nextInt();
+	        
+	        System.out.print("Autoria: ");
+	        String autoria = leia.nextLine();
 	       
-	        System.out.print("Preço: ");
+	        System.out.print("Preço: r$");
 	        float preco = leia.nextFloat();
 	        leia.nextLine();
 	        
@@ -136,7 +142,7 @@ public class Menu {
 	       
 	        System.out.print("Para gênero, digite: \n"
 	        		+ "1-Terror\n"
-	        		+ "2-Infantil ");
+	        		+ "2-Infantil\n");
 	         int genero = leia.nextInt();
 	        leia.nextLine();
 
@@ -147,11 +153,11 @@ public class Menu {
 	            System.out.print("Nível de medo: ");
 	            int nivelMedo = leia.nextInt();
 	            leia.nextLine();
-	            livro = new Terror(titulo, preco, qnt, genero, nivelMedo);
+	            livro = new Terror(titulo, ano, autoria, preco, qnt, genero, nivelMedo);
 	        } else {
 	            System.out.print("Tema abordado: ");
 	            String tema = leia.nextLine();
-	            livro = new Infantil(titulo, preco, qnt, genero, tema);
+	            livro = new Infantil(titulo, ano, autoria, preco, qnt, genero, tema);
 	        }
 
 	        controller.cadastrarLivro(livro);
@@ -196,26 +202,14 @@ public class Menu {
 
 	    private static void criarLivrosTeste() {
 	     
-	    controller.cadastrarLivro(new Terror("Infinity Pool", 25.0f, 10, 1, 7));
-        controller.cadastrarLivro(new Infantil("Harry Potter e a Pedra Filosofal", 40.0f, 5, 2, "Magia"));
-        controller.cadastrarLivro(new Terror("Casas Estranhas", 25.0f, 10, 1, 6));
-        controller.cadastrarLivro(new Terror("Desenhos Estranhos", 25.0f, 5, 1, 6));
-        controller.cadastrarLivro(new Infantil("Demi e o Pote Vazio", 25.0f, 10, 2, "Moral"));
-        controller.cadastrarLivro(new Infantil("Levada, eu?", 65.0f, 5, 2, "Cotidiano Divertido"));
+	    controller.cadastrarLivro(new Terror("Infinity Pool", 2006, "Mark Down", 25.0f, 10, 1, 7));
+        controller.cadastrarLivro(new Infantil("Harry Potter e a Pedra Filosofal", 2001, "JK Rowling", 40.0f, 5, 2, "Magia"));
+        controller.cadastrarLivro(new Terror("Casas Estranhas", 2017, "Kutsu", 25.0f, 10, 1, 6));
+        controller.cadastrarLivro(new Terror("Desenhos Estranhos", 2018, "Kutsu", 25.0f, 5, 1, 6));
+        controller.cadastrarLivro(new Infantil("Demi e o Pote Vazio", 2003, "Inu Yasha", 25.0f, 10, 2, "Moral"));
+        controller.cadastrarLivro(new Infantil("Levada, eu?", 2021, "Ruth Rocha", 65.0f, 5, 2, "Cotidiano Divertido"));
 	        
-	    	
-
-
-
-
-
-
-
-
-
-
-
-
+	   
 	}
 }
 

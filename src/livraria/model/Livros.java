@@ -4,6 +4,8 @@ public abstract class Livros {
 
 	private int id;
 	private String titulo;
+	private int ano;
+	private String autoria;
 	private float preco;
 	private int qnt;
 	private int genero;
@@ -81,12 +83,30 @@ public abstract class Livros {
 		System.out.println("********************************************");
 		System.out.printf("Id: %d%n", this.id);
 		System.out.printf("Título: %s%n", this.titulo);
+		System.out.printf("Ano: %d%n", this.ano);
+		System.out.printf("Autoria: %s%n", this.autoria);
 		System.out.printf("Preço: %.2f%n", this.preco);
 		System.out.printf("Quantidade em Estoque: %d%n", this.qnt);
 		System.out.printf("Gênero: %s%n", tipo);
 				
 				
 				}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
+
+	public String getAutoria() {
+		return autoria;
+	}
+
+	public void setAutoria(String autoria) {
+		this.autoria = autoria;
+	}
 	}
 	
 	
